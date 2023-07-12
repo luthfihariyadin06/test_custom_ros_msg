@@ -20,7 +20,7 @@ void callback_function( const follower::TargetState& msg){
 }
 
 // Create subscriber for target info
-ros::Subscriber<follower::TargetState> sub("target_info", callback_function);
+ros::Subscriber<follower::TargetState> sub("rover_command", callback_function);
 
 #ifdef DEBUG
 // Create publisher because when using rosserial you can't open serial monitor, so this is for debugging and to print out the value of variable that you want to check. The value will be accessible in ros terminal
